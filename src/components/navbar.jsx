@@ -28,7 +28,7 @@ const Navbar = () => {
                     }}
                 >
                     <Link to="/">
-                        <img src={logo} alt="logo" className="h-12 w-auto" />
+                        <img src={logo} alt="logo" className=" sm:text-lg md:text-lg" />
                     </Link>
                 </motion.div>
                 <nav className="hidden md:flex">
