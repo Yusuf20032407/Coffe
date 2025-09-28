@@ -1,12 +1,12 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import logo from '../assets/StarBucks.svg';
 import { Link } from 'react-router-dom';
 import Button from './button';
 import { motion } from 'framer-motion';
-import { Coffee, X } from 'lucide-react'; 
+import { Coffee, X } from 'lucide-react';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false); 
+    const [isOpen, setIsOpen] = useState(false);
     const navItems = ['Home', 'Select', 'Shop', 'Contact'];
 
     return (
@@ -54,8 +54,8 @@ const Navbar = () => {
                         visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.3 } },
                     }}
                 >
-                    <Button variant="secondary">Sign Up</Button>
-                    <Button variant="ghost">Register</Button>
+                    <Button variant="secondary"><Link to='/'>Sign Up</Link></Button>
+                    <Button variant="ghost"><Link to='/Register'>Register</Link></Button>
                 </motion.div>
                 <button
                     onClick={() => setIsOpen(true)}
@@ -99,8 +99,8 @@ const Navbar = () => {
                             </ul>
                         </nav>
                         <div className="flex flex-col gap-4">
-                            <Button variant="secondary">Sign Up</Button>
-                            <Button variant="ghost">Register</Button>
+                            <Button variant="secondary"><Link to='/'>Sign Up</Link></Button>
+                            <Button variant="ghost"><Link to='/'>Register</Link></Button>
                         </div>
                     </motion.div>
                     <div

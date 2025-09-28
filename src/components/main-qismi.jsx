@@ -67,7 +67,7 @@ const Mainqismi = () => {
                             }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <Link to="/">
+                            <Link to="https://youtu.be/C9UMVmi8DLI">
                                 <button className="flex items-center gap-2 text-white font-semibold text-lg md:text-2xl">
                                     <motion.img
                                         src={icon}
