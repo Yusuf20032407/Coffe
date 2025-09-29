@@ -4,6 +4,7 @@ import Button from "./button";
 import coffe1 from "../assets/usama2.svg";
 import coffe2 from "../assets/usama3.svg";
 import { Carousel } from "antd";
+import { motion } from "framer-motion";
 
 const contentStyle = {
     background: "transparent",
@@ -22,14 +23,13 @@ const Sectioncard = () => {
         { img: coffe2, title: "Cappuccino", price: "7,45$", size: "330 ml" },
     ];
 
-    // responsive columnlar soni (3 - desktop, 2 - tablet, 1 - mobile)
     const [columns, setColumns] = React.useState(3);
 
     React.useEffect(() => {
         const getColumns = () => {
-            if (window.innerWidth >= 1024) return 3; // lg
-            if (window.innerWidth >= 640) return 2; // sm / md
-            return 1; // mobile
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 640) return 2;
+            return 1;
         };
 
         setColumns(getColumns());
@@ -39,14 +39,28 @@ const Sectioncard = () => {
     }, []);
 
     return (
-        <div className="container mx-auto px-4">
-            {/* Header */}
-            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-[72px] mt-8">
-                <h1 className="text-white montserrent font-extrabold text-[40px] sm:text-[60px] lg:text-[80px] leading-tight tracking-[-3%]">
+        <div className="container mx-auto px-4 mt-[63px]">
+            <motion.div
+                className="flex flex-col pl-[50px] lg:pl-[150px] lg:flex-row items-start lg:items-center gap-6 lg:gap-[72px] mt-8"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                <motion.h1
+                    className="text-white montserrent font-extrabold text-[40px] sm:text-[60px] lg:text-[80px] leading-tight tracking-[-3%]"
+                    initial={{ opacity: 0, x: -80 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.9, ease: "easeOut" }}
+                >
                     New Our <br />
                     <span className="text-[#2EA65E]">Products</span>
-                </h1>
-                <p className="text-[#D9D9D9] font-normal text-base sm:text-lg lg:text-xl leading-[163%] tracking-[-2%] montserrent">
+                </motion.h1>
+                <motion.p
+                    className="text-[#D9D9D9] font-normal text-base sm:text-lg lg:text-xl leading-[163%] tracking-[-2%] montserrent"
+                    initial={{ opacity: 0, x: 80 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                >
                     Have time to buy the most harmonious drinks{" "}
                     <br className="hidden lg:block" />
                     in the new Starbucks coffee and don't forget{" "}
@@ -54,8 +68,8 @@ const Sectioncard = () => {
                     about the discount! Starbucks coffee and{" "}
                     <br className="hidden lg:block" />
                     don't forget about the discount!
-                </p>
-            </div>
+                </motion.p>
+            </motion.div>
 
             {/* Carousel */}
             <div className="max-w-[1200px] mx-auto mt-10">
@@ -77,16 +91,29 @@ const Sectioncard = () => {
                                             slideIndex * columns + columns
                                         )
                                         .map((item, i) => (
-                                            <div
+                                            <motion.div
                                                 key={i}
                                                 style={contentStyle}
-                                                className="w-full max-w-[277px] h-[613px] rounded-[20px] mt-[20px] border-2 border-white mx-auto flex flex-col"
+                                                className="w-full max-w-[277px] h-[613px] rounded-[20px] mt-[20px] border-2 border-white mx-auto flex flex-col shadow-lg shadow-black/30 overflow-hidden"
+                                                initial={{ opacity: 0, y: 100 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 0.6, delay: i * 0.2 }}
+                                                whileHover={{
+                                                    scale: 1.05,
+                                                    boxShadow: "0px 20px 40px rgba(0,0,0,0.4)",
+                                                }}
                                             >
-                                                <img
+                                                {/* Image */}
+                                                <motion.img
                                                     src={item.img}
                                                     alt={item.title}
                                                     className="w-full rounded-t-[20px]"
+                                                    whileHover={{ scale: 1.1 }}
+                                                    transition={{ duration: 0.5 }}
                                                 />
+
+                                                {/* Body */}
                                                 <div className="flex-1 flex flex-col justify-between p-4">
                                                     <div>
                                                         <p className="text-white text-center montserrent font-medium text-[24px] sm:text-[28px] lg:text-[32px] leading-[163%] tracking-[-2%]">
@@ -105,12 +132,19 @@ const Sectioncard = () => {
                                                                 {item.size}
                                                             </p>
                                                         </div>
-                                                        <div className="mt-4">
+                                                        <motion.div
+                                                            className="mt-4"
+                                                            whileHover={{
+                                                                scale: 1.1,
+                                                                rotate: [-2, 2, -2, 0],
+                                                            }}
+                                                            transition={{ type: "spring", stiffness: 300 }}
+                                                        >
                                                             <Button variant="default">Buy Product</Button>
-                                                        </div>
+                                                        </motion.div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </motion.div>
                                         ))}
                                 </div>
                             </div>
