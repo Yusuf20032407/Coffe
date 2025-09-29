@@ -6,6 +6,7 @@ import coffe2 from "../assets/usama3.svg";
 import { Carousel } from "antd";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import regntagle from '../assets/Rectangle11.webp'
 
 const contentStyle = {
     background: "transparent",
@@ -13,7 +14,7 @@ const contentStyle = {
 
 const Sectioncard = () => {
     const products = [
-        { img: coffe, title: "Fast", price: "7,45$", size: "330 ml" },
+        { img: regntagle, title: "Fast", price: "7,45$", size: "330 ml" },
         { img: coffe1, title: "Fast", price: "7,45$", size: "330 ml" },
         { img: coffe, title: "Fast", price: "7,45$", size: "330 ml" },
         { img: coffe2, title: "Cappuccino", price: "7,45$", size: "330 ml" },
