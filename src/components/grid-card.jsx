@@ -1,49 +1,93 @@
-import React from 'react'
-import Button from './button'
+import React from "react";
+import { motion } from "framer-motion";
+import Button from "./button";
 
-const Gridcard = () => {
+const EventsSection = () => {
+    const cardAnimation = {
+        hidden: { opacity: 0, y: 50, scale: 0.9 },
+        visible: { opacity: 1, y: 0, scale: 1 },
+    };
+
     return (
-        <div className='container mx-auto '>
-            <div className='flex items-center pl-[443px] gap-[72px] mt-[123px] mb-[108px]'>
-                <p className='text-[#D9D9D9] montserrent  font-normal text-xl leading-[163%] tracking-[-2%]'>Only in 2021 we have made more than 100,000 <br /> orders for you, your loved ones, all of you, and in <br /> 2022 we are ready to destroy the market  </p>
-                <h1 className='text-white font-extrabold text-[80px] leading-[109.00000000000001%] tracking-[-3%] montserrent '>Our New <br /> <span className='text-[#35C56B] font-extrabold text-[80px] leading-[109.00000000000001%] montserrent tracking-[-3%]'>Events</span></h1>
-            </div>
-            <div className='flex items-center justify-center gap-[40px]'>
-                <div>
-                    <div className='w-[615px] h-[260px] rounded-[30px]'
-                        style={{ backgroundImage: "url('/src/assets/alex1.png')" }}>
-                        <div className='pt-[50px] pl-[40px]'>
-                            <p className='text-white pb-[30px] montserrent font-medium text-[32px] leading-[109.00000000000001%] tracking-[0%]'>TWO COFFEE <br /> FOR 1 PRICE</p>
-                            <Button variant='more'>More</Button>
+        <div className="container mx-auto px-4">
+            {/* Title */}
+            <motion.div
+                className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-[72px] mt-12 mb-12 lg:pl-[150px]"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                variants={cardAnimation}
+            >
+                <p className="text-[#D9D9D9] montserrent font-normal text-base sm:text-lg lg:text-xl leading-[163%] tracking-[-2%]">
+                    Only in 2021 we have made more than 100,000 <br className="hidden md:block" />
+                    orders for you, your loved ones, all of you, and in <br className="hidden md:block" />
+                    2022 we are ready to destroy the market
+                </p>
+                <h1 className="text-white font-extrabold text-[40px] sm:text-[60px] lg:text-[80px] leading-[109%] tracking-[-3%] montserrent">
+                    Our New <br />
+                    <span className="text-[#35C56B]">Events</span>
+                </h1>
+            </motion.div>
+
+            {/* First Row */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                {[
+                    { img: "/src/assets/alex1.png", text: "TWO COFFEE FOR 1 PRICE" },
+                    { img: "/src/assets/Rectangle9.png", text: "KITCHEN TOUR" },
+                ].map((item, index) => (
+                    <motion.div
+                        key={index}
+                        className="w-full md:w-[615px] h-[260px] rounded-[30px] bg-cover bg-center flex flex-col justify-start"
+                        style={{ backgroundImage: `url(${item.img})` }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
+                        variants={cardAnimation}
+                    >
+                        <div className="pt-10 pl-6">
+                            <p className="text-white pb-6 montserrent font-medium text-[24px] sm:text-[28px] lg:text-[32px] leading-[109%]">
+                                {item.text}
+                            </p>
+                            <motion.div whileHover={{ scale: 1.1 }}>
+                                <Button variant="more">More</Button>
+                            </motion.div>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div className='w-[615px] h-[260px] rounded-[30px]'
-                        style={{ backgroundImage: "url('/src/assets/Rectangle9.png')" }}>
-                        <div className='pt-[50px] pl-[40px]'>
-                            <p className='text-white pb-[30px] montserrent font-medium text-[32px] leading-[109.00000000000001%] tracking-[0%]'>KITCHEN <br /> TOUR</p>
-                            <Button variant='more'>More</Button>
-                        </div>
-                    </div>
-                </div>
+                    </motion.div>
+                ))}
             </div>
-            <div className='flex items-center justify-center gap-[35px] mt-[30px]'>
-                <div style={{ backgroundImage: "url('/src/assets/Rectangle10.png')" }} className='w-[402px] pt-[50px] pl-[40px] h-[260px] rounded-[30px]'>
-                    <p className='font-medium pb-[30px] text-[32px] leading-[109.00000000000001%] tracking-[0%] montserrent text-white'>FREE COFFEE FOR 3 COFFEE</p>
-                    <Button variant='more'>More</Button>
-                </div>
-                <div style={{ backgroundImage: "url('/src/assets/Rectangle11.png')" }} className='w-[402px] pt-[50px] pl-[40px] h-[260px] rounded-[30px]'>
-                    <p className='font-medium pb-[65px] text-[32px] leading-[109.00000000000001%] tracking-[0%] montserrent text-white'>OUR INSTAGRAM</p>
-                    <Button variant='more'>More</Button>
-                </div>
-                <div style={{ backgroundImage: "url('/src/assets/Rectangle12.png')" }} className='w-[402px] pt-[50px] pl-[40px] h-[260px] rounded-[30px]'>
-                    <p className='font-medium pb-[30px] text-[32px] leading-[109.00000000000001%] tracking-[0%] montserrent text-white' >WHERE ARE YOU CHOOSE US?</p>
-                    <Button variant='more'>More</Button>
-                </div>
+
+            {/* Second Row */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-6">
+                {[
+                    { img: "/src/assets/Rectangle10.png", text: "FREE COFFEE FOR 3 COFFEE" },
+                    { img: "/src/assets/Rectangle11.png", text: "OUR INSTAGRAM" },
+                    { img: "/src/assets/Rectangle12.png", text: "WHERE ARE YOU CHOOSE US?" },
+                ].map((item, index) => (
+                    <motion.div
+                        key={index}
+                        className="w-full md:w-[402px] h-[260px] rounded-[30px] bg-cover bg-center flex flex-col justify-start"
+                        style={{ backgroundImage: `url(${item.img})` }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
+                        variants={cardAnimation}
+                    >
+                        <div className="pt-10 pl-6">
+                            <p className="text-white pb-6 montserrent font-medium text-[24px] sm:text-[28px] lg:text-[32px] leading-[109%]">
+                                {item.text}
+                            </p>
+                            <motion.div whileHover={{ scale: 1.1 }}>
+                                <Button variant="more">More</Button>
+                            </motion.div>
+                        </div>
+                    </motion.div>
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Gridcard
+export default EventsSection;

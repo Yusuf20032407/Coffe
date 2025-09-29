@@ -3,6 +3,7 @@ import Card from '../components/card'
 import Mainqismi from '../components/main-qismi'
 import Sectioncard from '../components/section-card'
 import Gridcard from '../components/grid-card'
+import Footermain from '../components/footer-main'
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Mainqismi />
             <Sectioncard />
             <Gridcard />
+            <Footermain />
         </div>
     )
 }
