@@ -12,7 +12,7 @@ function Register() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 px-4">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-green-800 via-green-400 to-green-200 px-4">
       <div className="w-full max-w-md bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 sm:p-10">
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-800 dark:text-white mb-6">

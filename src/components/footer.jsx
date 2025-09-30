@@ -9,8 +9,8 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white">
             <div className="container mx-auto px-6 py-10">
-                <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
-                    <div className="flex flex-col items-start gap-6">
+                <div className="flex flex-col lg:flex-row justify-center gap-10 lg:gap-[200px]">
+                    <div className="flex flex-col items-start gap-[100px]">
                         <img className="w-[160px] md:w-[200px]" src={logo} alt="logo" />
                         <p className="text-[#35C66B] font-medium text-lg md:text-xl">
                             +998955595444
@@ -77,8 +77,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="flex flex-col items-center gap-8">
-                        <div className="w-[70px] h-[70px] flex items-center justify-center border border-[#24764B] rounded-2xl">
+                    <div className="flex flex-col items-center gap-[50px]">
+                        <div className="w-[70px] h-[70px] flex items-center  justify-center border border-[#24764B] rounded-2xl">
                             <Link to="/">
                                 <img className="w-6" src={strelka} alt="arrow" />
                             </Link>
