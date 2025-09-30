@@ -7,11 +7,7 @@ function Register() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-
-    // backend yo‘q, faqat local login qilamiz
     login();
-
-    // ro‘yxatdan o‘tganidan keyin home page ga o'tkazamiz
     navigate("/home");
   };
 

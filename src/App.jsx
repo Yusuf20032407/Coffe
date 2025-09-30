@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
-import { AuthProvider, useAuth } from "./components/AuthContext";
+import { AuthProvider, useAuth } from "./components/Authcontext";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
