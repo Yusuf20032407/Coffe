@@ -7,91 +7,94 @@ import strelka from '../assets/corner-left-up.svg'
 
 const Footer = () => {
     return (
-        <div className='container mx-auto'>
-            <div className='bg-black h-[333px]'>
-                <div className='flex'>
-                    <div className='flex flex-col gap-[200px] pt-[40px] pl-[110px]'>
-                        <img className='w-[200px]' src={logo} alt="" />
-                        <p className='text-[#35C66B] montserrent font-medium text-[20px] leading-[100%] tracking-[0%]'>+998955595444</p>
+        <footer className="bg-black text-white">
+            <div className="container mx-auto px-6 py-10">
+                <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
+                    {/* Logo + Number */}
+                    <div className="flex flex-col items-start gap-6">
+                        <img className="w-[160px] md:w-[200px]" src={logo} alt="logo" />
+                        <p className="text-[#35C66B] font-medium text-lg md:text-xl">
+                            +998955595444
+                        </p>
                     </div>
-                    <nav>
-                        <ul className='pl-[107px] pt-[50px]'>
-                            <li className='text-[#BBB3B3] montserrent font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Main</Link>
+
+                    {/* Links sections */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 text-left">
+                        <ul>
+                            <li className="text-[#BBB3B3] font-medium text-lg pb-2">
+                                <Link to="/">Main</Link>
                             </li>
-                            <li className='text-[#BBB3B36E] montserrent pt-[8px] pb-[8px] font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Buy</Link>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Buy</Link>
                             </li>
-                            <li className='text-[#BBB3B36E] montserrent font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>More</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <ul className='pl-[82px] pt-[50px]'>
-                            <li className='text-[#BBB3B3] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>We make</Link>
-                            </li>
-                            <li className='text-[#BBB3B36E] montserrent font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Process</Link>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">More</Link>
                             </li>
                         </ul>
-                    </nav>
-                    <nav>
-                        <ul className='pl-[82px] pt-[50px]'>
-                            <li className='text-[#BBB3B3] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Products</Link>
+
+                        <ul>
+                            <li className="text-[#BBB3B3] font-medium text-lg pb-2">
+                                <Link to="/">We make</Link>
                             </li>
-                            <li className='text-[#BBB3B36E] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Cappuccino</Link>
-                            </li>
-                            <li className='text-[#BBB3B36E] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Fast</Link>
-                            </li>
-                            <li className='text-[#BBB3B36E] montserrent font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Fast</Link>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Process</Link>
                             </li>
                         </ul>
-                    </nav>
-                    <nav>
-                        <ul className='pl-[82px] pt-[50px]'>
-                            <li className='text-[#BBB3B3] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Events</Link>
+
+                        <ul>
+                            <li className="text-[#BBB3B3] font-medium text-lg pb-2">
+                                <Link to="/">Products</Link>
                             </li>
-                            <li className='text-[#BBB3B36E] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Drinks</Link>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Cappuccino</Link>
                             </li>
-                            <li className='text-[#BBB3B36E] montserrent font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Eat</Link>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Fast</Link>
                             </li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <ul className='pl-[82px] pt-[50px]'>
-                            <li className='text-[#BBB3B3] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Contacs</Link>
-                            </li>
-                            <li className='text-[#BBB3B36E] montserrent pb-2 font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='https://Instagram.com'>Instagram</Link>
-                            </li>
-                            <li className='text-[#BBB3B36E] montserrent font-normal text-xl leading-[100%] tracking-[-1%]'>
-                                <Link to='/'>Number</Link>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Fast</Link>
                             </li>
                         </ul>
-                    </nav>
-                    <div className='flex flex-col ml-30 items-center pt-14 gap-[100px]'>
-                        <div className='w-[80px] h-[80px] border-[#24764B] pl-5 border rounded-[30px]'>
-                            <Link to='/'>
-                                <img className='pt-5' src={strelka} alt="" />
+
+                        <ul>
+                            <li className="text-[#BBB3B3] font-medium text-lg pb-2">
+                                <Link to="/">Events</Link>
+                            </li>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Drinks</Link>
+                            </li>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Eat</Link>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li className="text-[#BBB3B3] font-medium text-lg pb-2">
+                                <Link to="/">Contacts</Link>
+                            </li>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="https://instagram.com">Instagram</Link>
+                            </li>
+                            <li className="text-[#BBB3B36E] hover:text-white transition">
+                                <Link to="/">Number</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Right side icons */}
+                    <div className="flex flex-col items-center gap-8">
+                        <div className="w-[70px] h-[70px] flex items-center justify-center border border-[#24764B] rounded-2xl">
+                            <Link to="/">
+                                <img className="w-6" src={strelka} alt="arrow" />
                             </Link>
                         </div>
-                        <Link to='https://Instagram.com'>
-                            <img src={instagram} alt="" />
+                        <Link to="https://instagram.com">
+                            <img className="w-8" src={instagram} alt="instagram" />
                         </Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 
