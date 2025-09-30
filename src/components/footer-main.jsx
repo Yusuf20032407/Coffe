@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import instagram from "../assets/instagram.svg";
 import telefon from "../assets/telefon.svg";
 import foto1 from "../assets/Group53.svg";
+import { Link } from "react-router-dom";
 
 const Footermain = () => {
     const fadeUp = {
@@ -30,25 +31,28 @@ const Footermain = () => {
                         don't forget about the discount!
                     </p>
                     <div className="pt-10 space-y-6">
-                        <motion.div
-                            className="flex items-center gap-4"
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            <img src={instagram} alt="Instagram" className="w-8 h-8 sm:w-10 sm:h-10" />
-                            <p className="text-white montserrent font-medium text-lg sm:text-2xl lg:text-[32px] leading-[132%]">
-                                @Ylatipov007
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            className="flex items-center gap-4"
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            <img src={telefon} alt="Phone" className="w-8 h-8 sm:w-10 sm:h-10" />
-                            <p className="text-white montserrent font-medium text-lg sm:text-2xl lg:text-[32px] leading-[132%]">
-                                +998 95 559 54 44
-                            </p>
-                        </motion.div>
+                        <Link to='https://instagram.com'>
+                            <motion.div
+                                className="flex items-center pb-10 gap-4"
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                <img src={instagram} alt="Instagram" className="w-8 h-8 sm:w-10 sm:h-10" />
+                                <p className="text-white montserrent font-medium text-lg sm:text-2xl lg:text-[32px] leading-[132%]">
+                                    @Ylatipov007
+                                </p>
+                            </motion.div>
+                        </Link>
+                        <Link to='/'>
+                            <motion.div
+                                className="flex items-center gap-4"
+                                whileHover={{ scale: 1.05 }}
+                            >
+                                <img src={telefon} alt="Phone" className="w-8 h-8 sm:w-10 sm:h-10" />
+                                <p className="text-white montserrent font-medium text-lg sm:text-2xl lg:text-[32px] leading-[132%]">
+                                    +998 95 559 54 44
+                                </p>
+                            </motion.div>
+                        </Link>
                     </div>
                 </motion.div>
                 <motion.div

@@ -7,7 +7,7 @@ import { Coffee, X } from 'lucide-react';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navItems = ['Home', 'Select', 'Shop', 'Contact'];
+    const navItems = ['Home', 'Menu', 'Shop', 'Contact'];
 
     return (
         <motion.div

@@ -10,7 +10,6 @@ const EventsSection = () => {
 
     return (
         <div className="container mx-auto px-4">
-            {/* Title */}
             <motion.div
                 className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-[72px] mt-12 mb-12 lg:pl-[150px]"
                 initial="hidden"
@@ -29,12 +28,10 @@ const EventsSection = () => {
                     <span className="text-[#35C56B]">Events</span>
                 </h1>
             </motion.div>
-
-            {/* First Row */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                 {[
-                    { img: "/src/assets/alex1.png", text: "TWO COFFEE FOR 1 PRICE" },
-                    { img: "/src/assets/Rectangle9.png", text: "KITCHEN TOUR" },
+                    { img: "/src/assets/alex1.webp", text: "TWO COFFEE FOR 1 PRICE" },
+                    { img: "/src/assets/Rectangle9.webp", text: "KITCHEN TOUR" },
                 ].map((item, index) => (
                     <motion.div
                         key={index}
@@ -57,13 +54,11 @@ const EventsSection = () => {
                     </motion.div>
                 ))}
             </div>
-
-            {/* Second Row */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-6">
                 {[
-                    { img: "/src/assets/Rectangle10.png", text: "FREE COFFEE FOR 3 COFFEE" },
-                    { img: "/src/assets/Rectangle11.png", text: "OUR INSTAGRAM" },
-                    { img: "/src/assets/Rectangle12.png", text: "WHERE ARE YOU CHOOSE US?" },
+                    { img: "/src/assets/Rectangle10.webp", text: "FREE COFFEE FOR 3 COFFEE" },
+                    { img: "/src/assets/Rectangle11.webp", text: "OUR INSTAGRAM" },
+                    { img: "/src/assets/Rectangle12.webp", text: "WHERE ARE YOU CHOOSE US?" },
                 ].map((item, index) => (
                     <motion.div
                         key={index}
