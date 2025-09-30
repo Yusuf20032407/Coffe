@@ -1,22 +1,44 @@
-import { useState } from 'react'
-import './App.css'
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/home'
-import Navbar from './components/navbar'
-import Footer from './components/footer'
+import { Routes, Route, Navigate, Outlet } from "react-router-dom";
+import { AuthProvider, useAuth } from "./components/AuthContext";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Menu from "./pages/Menu";
+import Register from "./components/Register";
 
+function Layout() {
   return (
     <>
-      < Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
+      <Navbar />
+      <Outlet />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+function PrivateRoute() {
+  const { isAuth } = useAuth();
+  return isAuth ? <Outlet /> : <Navigate to="/register" />;
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <Routes>
+        <Route path="/register" element={<Register />} />
+
+        <Route element={<PrivateRoute />}>
+          <Route element={<Layout />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/menu" element={<Menu />} />
+          </Route>
+        </Route>
+
+        <Route path="/" element={<Navigate to="/register" />} />
+      </Routes>
+    </AuthProvider>
+  );
+}
+
+export default App;

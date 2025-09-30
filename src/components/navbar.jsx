@@ -5,9 +5,10 @@ import Button from './button';
 import { motion } from 'framer-motion';
 import { Coffee, X } from 'lucide-react';
 
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navItems = ['Home', 'Menu', 'Shop', 'Contact'];
+    const navItems = [<Link to='/'>Home</Link>, <Link to='/Menu'>Menu</Link>, 'Shop', 'Contact'];
 
     return (
         <motion.div
@@ -55,7 +56,9 @@ const Navbar = () => {
                     }}
                 >
                     <Button variant="secondary"><Link to='/'>Sign Up</Link></Button>
-                    <Button variant="ghost"><Link to='/Register'>Register</Link></Button>
+                    <Link to='Register'>
+                        <Button variant="ghost"><Link to='/Register'>Register</Link></Button>
+                    </Link>
                 </motion.div>
                 <button
                     onClick={() => setIsOpen(true)}
