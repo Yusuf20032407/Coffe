@@ -1,16 +1,16 @@
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { AuthProvider, useAuth } from "./components/Authcontext";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import Home from "./pages/home";
 import Menu from "./pages/Menu";
 import Register from "./components/Register";
 
 function Layout() {
   return (
     <>
-      <Navbar />
+      <Navbar />x``
       <Outlet />
       <Footer />
     </>
@@ -19,14 +19,14 @@ function Layout() {
 
 function PrivateRoute() {
   const { isAuth } = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to="/register" />;
+  return isAuth ? <Outlet /> : <Navigate to="/Register" />;
 }
 
 function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/register" element={<Register />} />
+        <Route path="/Register" element={<Register />} />
 
         <Route element={<PrivateRoute />}>
           <Route element={<Layout />}>
