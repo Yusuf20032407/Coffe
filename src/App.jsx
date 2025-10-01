@@ -10,7 +10,7 @@ import Register from "./components/Register";
 function Layout() {
   return (
     <>
-      <Navbar />x``
+      <Navbar />
       <Outlet />
       <Footer />
     </>
