@@ -36,7 +36,7 @@ export default function Location() {
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="p-4 md:p-6 border-b">
                     <h3 className="text-base montserrent md:text-lg lg:text-xl font-semibold text-gray-800">
-                        Location — Uzbekistan
+                        Location — Uzbekistann
                     </h3>
                     <p className="text-xs montserrent md:text-sm text-gray-500">
                         Interactive map with markers
