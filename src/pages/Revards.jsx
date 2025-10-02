@@ -1,12 +1,12 @@
-import { Button, ConfigProvider  } from 'antd'
-import React from 'react'
+import { Button, ConfigProvider } from 'antd'
 
 const Revards = () => {
   return (
     <div>
-      <div className='star bg-white'>
-        <p className='montserrent text-[14px]'>Starbucks® Rewards</p>
+      <div className="star bg-white sticky top-0 z-50">
+        <p className="montserrent text-[14px]">Starbucks® Rewards</p>
       </div>
+
       <div className='container mx-auto px-8 flex justify-between items-center mb-[100px]'>
         <div>
           <h1 className='montserrent text-[50px] text-white font-bold '>It's a great day for <br />free coffee</h1>
@@ -15,7 +15,7 @@ const Revards = () => {
             theme={{
               token: {
                 colorPrimary: "#32B765",
-                 borderRadius: 25,
+                borderRadius: 25,
               },
             }}
           >
