@@ -5,7 +5,7 @@ import Button from './button';
 import { motion } from 'framer-motion';
 import { Coffee, X } from 'lucide-react';
 import { useAuth } from './Authcontext';
-import { Button as AntButton } from "antd"; // ⚡ antd button
+import { Button as AntButton } from "antd";
 import { SunOutlined, MoonOutlined } from "@ant-design/icons";
 
 const Navbar = ({ onToggleTheme, isDark }) => {
@@ -40,7 +40,6 @@ const Navbar = ({ onToggleTheme, isDark }) => {
                     <img src={logo} alt="logo" className="max-w-[140px]" />
                 </Link>
 
-                {/* Menu items */}
                 <nav className="hidden md:flex">
                     <ul className="flex items-center gap-10">
                         {navItems.map((item, index) => (
@@ -62,9 +61,8 @@ const Navbar = ({ onToggleTheme, isDark }) => {
                     </ul>
                 </nav>
 
-                {/* Right side */}
+               
                 <div className="hidden md:flex items-center gap-4">
-                    {/* Dark/Light toggle button */}
                     <AntButton
                         type="text"
                         shape="circle"
@@ -79,13 +77,11 @@ const Navbar = ({ onToggleTheme, isDark }) => {
                     </Link>
                 </div>
 
-                {/* Mobile menu button */}
                 <button onClick={() => setIsOpen(true)} className="md:hidden text-white">
                     <Coffee size={32} />
                 </button>
             </div>
 
-            {/* Mobile Sidebar */}
             {isOpen && (
                 <motion.div
                     className="fixed inset-0 bg-black bg-opacity-50 z-50 flex"
@@ -128,7 +124,7 @@ const Navbar = ({ onToggleTheme, isDark }) => {
                                 shape="circle"
                                 onClick={onToggleTheme}
                                 style={{
-                                    width: window.innerWidth < 640 ? 35 : 50,   // 👈 mobile kichikroq
+                                    width: window.innerWidth < 640 ? 35 : 50,
                                     height: window.innerWidth < 640 ? 35 : 50,
                                     display: "flex",
                                     alignItems: "center",
@@ -138,7 +134,7 @@ const Navbar = ({ onToggleTheme, isDark }) => {
                                     isDark ? (
                                         <SunOutlined
                                             style={{
-                                                fontSize: window.innerWidth < 640 ? 22 : 28, // icon ham moslashadi
+                                                fontSize: window.innerWidth < 640 ? 22 : 28,
                                                 color: "orange",
                                             }}
                                         />
