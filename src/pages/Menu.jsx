@@ -7,7 +7,7 @@ const Menu = () => {
     <div>
       <Tabs
         color="white"
-        className="text-[#ffffffff]"
+        className="text-[#ffffffff] container mx-auto"
         defaultActiveKey="1"
         items={[
           {
@@ -28,6 +28,10 @@ const Menu = () => {
           },
         ]}
       />
+      <div className="grid- container mx-auto">
+        <div className="w-[80px] h-[80px] bg-amber-300">1</div>
+        <div className="w-[80px] h-[80px] bg-amber-700">2</div>
+      </div>
     </div>
   );
 };
