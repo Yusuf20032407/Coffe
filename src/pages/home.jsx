@@ -1,11 +1,11 @@
-import React from 'react'
-import Card from '../components/card'
-import Mainqismi from '../components/main-qismi'
-import Sectioncard from '../components/section-card'
-import Footermain from '../components/footer-main'
-import EventsSection from '../components/grid-card'
-import UpButton from '../components/UpButton'
-
+import React from "react";
+import Card from "../components/card";
+import Mainqismi from "../components/main-qismi";
+import Sectioncard from "../components/section-card";
+import Footermain from "../components/footer-main";
+import EventsSection from "../components/grid-card";
+import UpButton from "../components/UpButton";
+import Location from "../components/Location";
 
 const Home = () => {
     return (
@@ -14,10 +14,17 @@ const Home = () => {
             <Mainqismi />
             <Sectioncard />
             <EventsSection />
-            <Footermain />
-            <UpButton/>
-        </div>
-    )
-}
+            <div className="w-100% h-[500px] mb-52 mt-30">
+                <h1 className="text-2xl montserrent text-white font-bold text-center mt-5">
+                    Welcome to Uzbekistan Map
+                </h1>
+                <Location />
+            </div>
 
-export default Home
+            <Footermain />
+            <UpButton />
+        </div>
+    );
+};
+
+export default Home;

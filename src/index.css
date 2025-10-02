@@ -16,5 +16,6 @@ body.dark {
     transition: all 0.3s ease;
 }
 .star{
-    padding: 15px 40px 15px 131px;
+    padding: 20px;
+    padding-left: 40px;
 }

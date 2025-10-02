@@ -39,7 +39,6 @@ const Navbar = ({ onToggleTheme, isDark }) => {
                 <Link to="/home">
                     <img src={logo} alt="logo" className="max-w-[140px]" />
                 </Link>
-
                 <nav className="hidden md:flex">
                     <ul className="flex items-center gap-10">
                         {navItems.map((item, index) => (
@@ -61,7 +60,7 @@ const Navbar = ({ onToggleTheme, isDark }) => {
                     </ul>
                 </nav>
 
-               
+
                 <div className="hidden md:flex items-center gap-4">
                     <AntButton
                         type="text"

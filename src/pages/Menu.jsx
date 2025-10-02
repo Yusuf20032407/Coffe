@@ -26,7 +26,7 @@ const Menu = () => {
                   <div className="flex">
                     <div className="montserrent ml-[25px] mt-[25px] text-white">
                       <h1 className="font-semibold text-[40px]">Brazil</h1>
-                      <h3 className="text-[50px] font-light leading-15">
+                      <h3 className="text-[50px]  font-light leading-15">
                         Cerrado
                       </h3>
                       <p className="pt-[15px]">
