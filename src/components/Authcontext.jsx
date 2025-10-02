@@ -1,12 +1,26 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-    const [isAuth, setIsAuth] = useState(false);
+    const [isAuth, setIsAuth] = useState(() => localStorage.getItem("isAuth") === "true");
 
-    const login = () => setIsAuth(true);
-    const logout = () => setIsAuth(false);
+    useEffect(() => {
+        const savedAuth = localStorage.getItem("isAuth");
+        if (savedAuth === "true") {
+            setIsAuth(true);
+        }
+    }, []);
+
+    const login = () => {
+        setIsAuth(true);
+        localStorage.setItem("isAuth", "true");
+    };
+
+    const logout = () => {
+        setIsAuth(false);
+        localStorage.removeItem("isAuth"); // tokenni/flagni o‘chiradi
+    };
 
     return (
         <AuthContext.Provider value={{ isAuth, login, logout }}>

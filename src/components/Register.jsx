@@ -1,14 +1,22 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "./Authcontext";
+import { useEffect } from "react";
 
 function Register() {
-  const { login } = useAuth();
+  const { isAuth, login } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Agar user allaqachon login bo‘lsa, uni register sahifasidan chiqaramiz
+    if (isAuth) {
+      navigate("/home");
+    }
+  }, [isAuth, navigate]);
 
   const handleRegister = (e) => {
     e.preventDefault();
-    login();
-    navigate("/home");
+    login(); // login qilamiz
+    navigate("/home"); // keyin home sahifaga o‘tkazamiz
   };
 
   return (
@@ -56,7 +64,6 @@ function Register() {
           </button>
         </form>
 
-        {/* Footer */}
         <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-6">
           Already have an account?{" "}
           <span className="text-indigo-600 font-semibold cursor-pointer hover:underline">

@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Home from "./pages/home";
 import Menu from "./pages/Menu";
 import Register from "./components/Register";
+import Revards from "./pages/Revards";
 
 function Layout() {
   return (
@@ -19,22 +20,21 @@ function Layout() {
 
 function PrivateRoute() {
   const { isAuth } = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to="/Register" />;
+  return isAuth ? <Outlet /> : <Navigate to="/register" />;
 }
 
 function App() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/Register" element={<Register />} />
-
+        <Route path="/register" element={<Register />} />
         <Route element={<PrivateRoute />}>
           <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/revards" element={<Revards />} />
           </Route>
         </Route>
-
         <Route path="/" element={<Navigate to="/register" />} />
       </Routes>
     </AuthProvider>
