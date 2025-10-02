@@ -7,7 +7,7 @@ const Revards = () => {
         <p className="montserrent text-[14px]">Starbucks® Rewards</p>
       </div>
 
-      <div className='container mx-auto px-8 flex justify-between items-center mb-[100px]'>
+      <div className='container mx-auto px-8 pt-[20px] flex justify-between items-center mb-[100px]'>
         <div>
           <h1 className='montserrent text-[50px] text-white font-bold '>It's a great day for <br />free coffee</h1>
           <p className='montserrent text-[19px] text-white pt-[24px] pb-[34px]'>Sign up and start enjoying the perks of Starbucks® Rewards.</p>
