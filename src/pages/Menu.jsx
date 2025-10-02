@@ -8,7 +8,7 @@ const Menu = () => {
   const handleChange = (value, label) => {
     console.log(value, label);
   };
-  const [size, setSize] = useState("large");
+
   return (
     <div className="container mx-auto">
       <Tabs
