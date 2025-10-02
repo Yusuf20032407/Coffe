@@ -6,23 +6,21 @@ const Menu = () => {
   return (
     <div>
       <Tabs
-        color="white"
-        className="text-[#ffffffff] container mx-auto"
         defaultActiveKey="1"
+        tabBarStyle={{ backgroundColor: "" }}
         items={[
           {
-            label: "Coffe",
+            label: <span style={{ color: "white" }}>Coffe</span>,
             key: "1",
             children: "Tab 1",
-            className: "text-white",
           },
           {
-            label: "Tab 2",
+            label: <span style={{ color: "white" }}>Tab 2</span>,
             key: "2",
             children: "Tab 2",
           },
           {
-            label: "Tab 3",
+            label: <span className="text-white">Tab 3</span>,
             key: "3",
             children: "Tab 3",
           },
