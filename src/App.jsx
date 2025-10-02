@@ -1,15 +1,14 @@
+import "leaflet/dist/leaflet.css";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { AuthProvider, useAuth } from "./components/Authcontext";
-import { ConfigProvider, Button, theme } from "antd";
-import { SunOutlined, MoonOutlined } from "@ant-design/icons"; // 🌙 ☀️ icons
-
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Home from "./pages/home";
+import { ConfigProvider, theme } from "antd";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Menu from "./pages/Menu";
 import Register from "./components/Register";
 import Revards from "./pages/Revards";
 import { useState, useEffect } from "react";
+import Home from "./pages/home";
 
 function Layout({ onToggleTheme, isDark }) {
   return (
@@ -29,7 +28,6 @@ function PrivateRoute() {
 function App() {
   const [isDark, setIsDark] = useState(false);
 
-  // body ga dark class qo‘shish
   useEffect(() => {
     if (isDark) {
       document.body.classList.add("dark");
@@ -45,8 +43,6 @@ function App() {
       }}
     >
       <AuthProvider>
-       
-
         <Routes>
           <Route path="/register" element={<Register />} />
           <Route element={<PrivateRoute />}>
