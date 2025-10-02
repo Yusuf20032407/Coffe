@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { ConfigProvider } from "antd";
-import "leaflet/dist/leaflet.css";
 
 const root = createRoot(document.getElementById("root")); 
 root.render(
