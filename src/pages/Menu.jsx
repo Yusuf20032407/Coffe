@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import { Tabs, Select, Button } from "antd";
 import CoffeBox from "../assets/Caffelito.svg";
-import { DownloadOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 
 const Menu = () => {
   const handleChange = (value, label) => {
     console.log(value, label);
   };
+  const [size, setSize] = useState("large");
+
   return (
     <div className="container mx-auto">
       <Tabs
@@ -46,7 +48,7 @@ const Menu = () => {
                           value: "Americano",
                           label: "Americano (45гр)",
                         }}
-                        style={{ width: 160 }}
+                        style={{ width: 160, fontFamily: "montserrent" }}
                         onChange={handleChange}
                         options={[
                           {
@@ -68,7 +70,7 @@ const Menu = () => {
                       <Select
                         labelInValue
                         defaultValue={{ value: "Latte", label: "Latte (45гр)" }}
-                        style={{ width: 130 }}
+                        style={{ width: 130, fontFamily: "montserrent" }}
                         onChange={handleChange}
                         options={[
                           {
@@ -87,11 +89,25 @@ const Menu = () => {
                       />
                     </div>
                   </div>
-                  <div className="flex items-center ml-[25px] gap-[10px] text-white mb-[40px]">
+                  <div className="flex items-center ml-[25px] gap-[10px] text-white mb-[30px] montserrent">
                     <p className="text-[30px] font-bold">110000</p>
                     <p className="text-[20px] font-semibold">UZS</p>
                   </div>
-                  <div></div>
+                  <div>
+                    <div>
+                      <Button
+                        className="ml-[25px]"
+                        type="primary"
+                        icon={<PlusOutlined />}
+                        size={size}
+                      >
+                        В корзину
+                      </Button>
+                    </div>
+                    <div>
+                      
+                    </div>
+                  </div>
                 </div>
                 <div className="w-[100vh] h-auto bg-white"></div>
               </div>
