@@ -1,11 +1,10 @@
-
 import logo from '../assets/StarBucks.svg';
 import { Link } from 'react-router-dom';
 import instagram from '../assets/instagram.svg'
 
 
-const Footer = () => {
-  
+const Footers = () => {
+
     return (
         <footer className="bg-black text-white">
             <div className="container mx-auto px-6 py-10">
@@ -78,7 +77,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="flex flex-col items-center gap-[50px]">
-                       
+
                         <Link to="https://instagram.com">
                             <img className="w-8" src={instagram} alt="instagram" />
                         </Link>
@@ -89,4 +88,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footers
