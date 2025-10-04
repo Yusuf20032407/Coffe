@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react'
+
 import logo from '../assets/StarBucks.svg';
 import { Link } from 'react-router-dom';
 import instagram from '../assets/instagram.svg'
-
-
-
 
 
 const Footer = () => {

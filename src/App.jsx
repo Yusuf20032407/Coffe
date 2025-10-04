@@ -2,13 +2,14 @@ import "leaflet/dist/leaflet.css";
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
 import { AuthProvider, useAuth } from "./components/Authcontext";
 import { ConfigProvider, theme } from "antd";
-import Footer from "./components/Footer";
 import Menu from "./pages/Menu";
 import Register from "./components/Register";
 import Revards from "./pages/Revards";
 import { useState, useEffect } from "react";
 import Home from "./pages/home";
 import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
+
 
 function Layout({ onToggleTheme, isDark }) {
   return (
