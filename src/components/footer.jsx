@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import instagram from '../assets/instagram.svg'
 
 
-const Footers = () => {
+const Footer = () => {
 
     return (
         <footer className="bg-black text-white">
@@ -88,4 +88,4 @@ const Footers = () => {
     )
 }
 
-export default Footers
+export default Footer

@@ -8,7 +8,8 @@ import Revards from "./pages/Revards";
 import { useState, useEffect } from "react";
 import Home from "./pages/home";
 import Navbar from "./components/navbar";
-import Footers from "./components/Footer";
+import Footer from "./components/Footer";
+
 
 
 function Layout({ onToggleTheme, isDark }) {
@@ -16,7 +17,7 @@ function Layout({ onToggleTheme, isDark }) {
     <>
       <Navbar onToggleTheme={onToggleTheme} isDark={isDark} />
       <Outlet />
-      <Footers />
+      <Footer />
     </>
   );
 }
