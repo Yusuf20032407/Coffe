@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import location from '../assets/location.svg';
+
 import {
     MapContainer,
     TileLayer,
