@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import location from '../assets/location.svg';
-
 import {
     MapContainer,
     TileLayer,
@@ -11,7 +9,6 @@ import {
 import L from "leaflet";
 import { Input, Card, Button } from "antd";
 import {
-    EnvironmentOutlined,
     SearchOutlined,
     CompassOutlined,
 } from "@ant-design/icons";
