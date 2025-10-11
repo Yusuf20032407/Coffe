@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+
+.montserrent {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #163b25;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+body.dark {
+    background-color: black;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.star {
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.savedBtn:hover {
+    background-color: black;
+}
