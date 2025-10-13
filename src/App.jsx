@@ -9,6 +9,7 @@ import Home from "./pages/home";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Location from "./components/location"
+import ContactPage from "./pages/Contact.jsx";
 
 
 function Layout({ onToggleTheme, isDark }) {
@@ -59,6 +60,7 @@ function App() {
               <Route path="/menu" element={<Menu />} />
               <Route path="/revards" element={<Revards />} />
               <Route path="/location" element={<Location />} />
+              <Route path="/Contact" element={<ContactPage />} />
             </Route>
           </Route>
           <Route path="/" element={<Navigate to="/register" />} />

@@ -17,7 +17,7 @@ const Navbar = ({ onToggleTheme, isDark }) => {
         { name: "Home", path: "/home" },
         { name: "Menu", path: "/menu" },
         { name: "Revards", path: "/Revards" },
-        { name: "Contact", path: "/contact" },
+        { name: "Contact", path: "/Contact" },
     ];
 
     const handleLogout = () => {
